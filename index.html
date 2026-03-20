@@ -167,15 +167,16 @@
         .contact-info h3{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:1rem;transition:all .3s}
         .contact-info:hover h3{transform:translateX(5px)}
         .contact-info>p{opacity:.85;margin-bottom:2rem;line-height:1.7;transition:all .3s}
-        .contact-item{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;transition:all .3s}
+        .contact-item{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start;transition:all .3s}
         .contact-item:hover{transform:translateX(5px)}
         .contact-icon{width:clamp(40px,6vw,50px);height:clamp(40px,6vw,50px);background:rgba(201,162,39,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s}
         .contact-item:hover .contact-icon{background:var(--secondary);transform:scale(1.1) rotate(10deg)}
         .contact-icon i{color:var(--secondary);font-size:clamp(1rem,1.5vw,1.2rem);transition:all .3s}
         .contact-item:hover .contact-icon i{color:var(--dark)}
-        .contact-details{min-width:0}
+        .contact-details{min-width:0;flex:1}
         .contact-details h4{font-size:1rem;margin-bottom:.25rem;transition:all .3s}
         .contact-details p,.contact-details a{opacity:.85;color:#fff;text-decoration:none;font-size:.95rem;word-break:break-word;transition:all .3s}
+        .contact-details a.email{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
         .contact-details a:hover{opacity:1;color:var(--secondary)}
         .contact-social{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
         .contact-social a{width:clamp(38px,5vw,45px);height:clamp(38px,5vw,45px);background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .4s}
@@ -243,6 +244,9 @@
             .btn-primary,.btn-secondary{width:100%;justify-content:center}
             .about-img-secondary{width:40%;bottom:-15px;right:-10px}
             .experience-badge{top:15px;left:-10px;padding:1rem}
+            .contact-item{position:relative}
+            .contact-icon{flex-shrink:0}
+            .contact-details a.email{white-space:normal;word-break:break-all}
         }
         @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
     </style>
@@ -568,7 +572,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email Us</h4>
-                        <a href="mailto:pmconstructiongp@gmail.com">pmconstructiongp@gmail.com</a>
+                        <a href="mailto:pmconstructiongp@gmail.com" class="email">pmconstructiongp@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-social">
@@ -668,10 +672,7 @@
                         <i class="fas fa-envelope" style="font-size: 1rem;"></i>
                     </div>
                     <div class="contact-details">
-                        <a 
-                        href="mailto:pmconstructiongp@gmail.com">
-                       pmconstructiongp@gmail.com
-                        </a>
+                        <a href="mailto:pmconstructiongp@gmail.com" class="email">pmconstructiongp@gmail.com</a>
                     </div>
                 </div>
             </div>
